@@ -32,12 +32,17 @@ nav{
     align-items: center;
     justify-content: space-between;
     font-family: Reckless;
-    padding: 0.8vw 1vw;
+    padding: 0.8rem 1rem;
     border-radius: 1vw;
     font-size: 0.8rem;
     position: fixed;
     top: 0;
     left: 0;
+}
+
+nav i{
+    font-size: 2rem;
+    width: 4%;
 }
 
 nav .nav-part-1{
@@ -49,10 +54,11 @@ nav .nav-part-1{
 }
 .nav-part-1 h3{
     font-weight: 300;
+    display: none;
 }
 
 nav .nav-part-2{
-    width: 5vw;
+    width: 35%;
     height: auto;
     display: flex;
     
@@ -67,37 +73,39 @@ nav .nav-part-2{
 .nav-part-3{
     display: flex;
     width: 33%;
-    gap: 2vw;
+    gap: 2rem;
     align-items: center;
     justify-content: end;
 }
 
 .nav-part-3 h3{
     font-weight: 300;
+    display: none;
 }
 .nav-part-3 svg{
-    width: 1.5vw;
+    width: 30%;
 }
 
 #section-1{
     height: 90vh;
     width: 100%;
-    background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=3600.0);
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=511);
     background-size:cover ;
     background-position: center; 
     display: flex;
     justify-content: end;
     flex-direction: column;
-    padding: 3vw;
-    align-items: start;
-    gap: 1vw;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    gap: 1rem;
 
 }
 
 #section-1 h1{
-    font-size: 3rem;
-    max-width: 30vw;
-    font-weight: 300;
+    font-size: clamp(2.9rem,4vw,4rem);
+    /* max-width: 30vw; */
+    font-weight: 500;
+    text-align: center;
     font-family: Reckless;
     color: #FBF9EB;
 }
@@ -105,17 +113,34 @@ nav .nav-part-2{
     font-size: 1rem;
     font-weight: 300;
     font-family: Figtree;
-    max-width: 33vw;
+    /* max-width: 33vw; */
     color: #FBF9EB;
+    text-align: center;
+    
 
 }
 
 #section-1 button{
-    padding: 0.8vw 3.5vw;
+    width: 90%;
+    padding: 1.1rem;
     border: none;
     font-size: 1rem;
     background-color: #2A2857;
     color: white;
-    border-radius: 2.5vw;
+    border-radius: 2.5rem;
     font-family: Figtree;
+}
+
+
+@media (min-width:768px) {
+  .container {
+    padding:2rem;
+  }
+}
+
+
+@media (min-width:1024px) {
+  .container {
+    padding:4rem;
+  }
 }
