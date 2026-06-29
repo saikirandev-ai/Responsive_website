@@ -1,211 +1,1860 @@
 @font-face {
-    font-family: Reckless;
-    src: url(./fonts//RecklessCondensedS-TRIAL-Book.woff);
+    font-family: reckless;
+    src: url(./RecklessCondensedS-TRIAL-Book.woff);
 }
 
 @font-face {
-    font-family: Figtree;
-    src: url(./fonts/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2);
+    font-family: robotoMono;
+    src: url(./RobotoMono-Regular.ttf);
 }
 
 @font-face {
-    font-family:  Midnight;
-    src: url(./fonts//midnight-sans-rd-12-medium-trial.otf);
+    font-family: figtree;
+    src: url(./figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2);
 }
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+@font-face {
+    font-family: midnight;
+    src: url(./midnight-sans-rd-12-medium-trial.otf);
 }
-html,body{
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
     width: 100%;
-    height: 100%;
-}
-main{
-    width: 100%;
-    min-height: 100vh;/* min height is used for giving minimum height to element*/
-    background-color: #FBF9EB;
-   
- 
-
 }
 
-nav{
-   width: 100%;
- background-color: #FFFEFB;
- display: flex;
- align-items: center;
- justify-content: space-between;
- font-family: Reckless;
-  padding: 0.8rem 1rem;
-   font-size: 0.8rem;
-   position: sticky;
-
+body {
+    box-sizing: border-box;
 }
-nav i{
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2857;
+}
+
+.heading h4 {
+    padding: 0.5rem;
+    color: white;
+    font-family: robotoMono;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 5vw, 1rem);
+    text-transform: uppercase;
+}
+
+nav {
+    margin: 1rem;
+    display: flex;
+    padding: 0.7rem 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fbf9ec;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+
+nav .left-part {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 45%;
+}
+
+nav .left-icon i {
     font-size: 2rem;
-    width: 33%;
+    opacity: 0.5;
+    cursor: pointer;
+
 }
-nav .nav-part-1{
-    display: flex;
-    gap: 1rem;
-    width: 33%;
+
+.left-part a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: reckless;
     display: none;
-   
-}
-.nav-part-1 h3{
-font-weight: 300;
 }
 
-nav .nav-part-2{
-    width: 20%;
-    height: auto;
+.left-part a i {
+    margin-left: 0.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #c0dbff;
+}
+
+.left-part a .ri-star-fill {
+    border: none;
+    background-color: transparent;
+    color: orange;
+    padding: 0.1rem;
+}
+
+nav .center-logo {
+    min-width: 10%;
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
 }
 
-.nav-part-2 img{
+.center-logo img {
     width: 100%;
-    object-fit: cover;
 }
 
-.nav-part-3{
+
+nav .right-part {
+    width: 45%;
     display: flex;
-    width: 30%;
-   gap: 2rem;
-   align-items: center;
+    align-items: center;
     justify-content: end;
-    
+    gap: 1.5rem;
 }
 
-.nav-part-3 h3{
-font-weight: 300;
-display: none;
+.right-part a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    font-family: robotoMono;
+    display: none;
 }
 
-.nav-part-3 svg{
-   width: 30px;
-   height: 30px;
-
+.shopping-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#section-1{
+.right-part svg {
     width: 100%;
-    height: 85vh;
-    background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=720);
+}
+
+.shopping-icon span {
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: orange;
+    text-align: center;
+    font-family: robotoMono;
+    font-size: 0.8rem;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+main .sec-1 {
+    min-height: 80vh;
+    margin-top: -100px;
+    padding-top: 100px;
+    background-image: url("https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=720");
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: end;
-    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+.sec-1 .textContent {
+    min-height: 70vh;
     padding: 3rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
     gap: 1rem;
     text-align: center;
-    border-bottom: 1px solid #000;
 }
 
-#section-1 h1{
-    font-size: clamp(3.5rem,5vw,5rem);
-font-family: Reckless;
-color: white;
-font-weight: 500;
-
-}
-
-#section-1 p{
-    font-size: clamp(1.2rem,1vw,1rem);
-    font-family: Figtree;
-    font-weight: 400;       
+.textContent h1 {
+    font-family: reckless;
+    font-size: clamp(3rem, 4vw, 4rem);
+    font-weight: 500;
     color: white;
 }
 
-#section-1 button{
-   
-    padding: 1.2rem;
+.textContent p {
+    font-family: figtree;
+    font-weight: 300;
+    font-size: clamp(1.2rem, 1vw, 1rem);
+    color: white;
+}
+
+.textContent button {
+    width: 95%;
+    padding: 1rem;
+    font-weight: 400;
+    font-family: figtree;
+    font-size: 1.1rem;
     border: none;
-    background-color: #2A2857;
+    border-radius: 2rem;
+    background-color: #2a2857;
     color: white;
-    font-family: Figtree;
-    border-radius: 1.2rem;
+    cursor: pointer;
+}
+
+main .sec-2 {
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    gap: 3rem;
+    border-bottom: 2px solid black;
+}
+
+.sec-2 .text h1 {
+    font-family: reckless;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 100;
+    text-align: center;
+    padding: 5rem 3rem;
+}
+
+.sec-2 .btn {
+    padding: 0rem 1rem;
+}
+
+.btn button {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-family: midnight;
+    font-weight: 600;
+    background-color: #d9aee8;
+    padding: 0rem 0.3rem;
+    border-radius: 0.5rem;
+    rotate: -4deg;
+}
+
+.sec-2 .container {
+    padding: 1.5rem 0rem 1.5rem 1.5rem;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+.container .cardInfo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.cardInfo .card {
+    width: 85%;
+    height: 50vh;
+    background-color: #c2ee97;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.cardInfo .card::-webkit-scrollbar {
+    overflow: auto;
+}
+
+.cardInfo .card2 {
+    background-color: #fdd98b;
+}
+
+.cardInfo .card3 {
+    background-color: #b2e8c3;
+}
+
+.cardInfo .card4 {
+    background-color: #c3e4f7;
+}
+
+.cardInfo .card5 {
+    background-color: #c1e57a;
+}
+
+.cardInfo .card6 {
+    background-color: #fdcc9a;
+}
+
+.cardInfo .card7 {
+    background-color: #fdd2ba;
+}
+
+.cardInfo .card8 {
+    background-color: #cde3fe;
+}
+
+.cardInfo .card9 {
+    background-color: #b1dff8;
+}
+
+.card .topBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .topBtn button {
+    width: fit-content;
+    padding: 0rem 0.5rem;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    font-family: midnight;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    background-color: white;
+    text-transform: uppercase;
+}
+
+.topBtn p {
+    font-size: 1rem;
+    font-family: figtree;
+}
+
+.cardInfo .card .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardInfo .card img {
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease-out 0.3s;
+    cursor: pointer;
+}
+
+.card4 .image {
+    height: 85%;
+}
+
+.card .image:hover img {
+    scale: 1.1;
+}
+
+.card .btmBtn {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.card .btmBtn button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    color: rgb(131, 122, 122);
+    background-color: white;
+    font-family: figtree;
+}
+
+.btmBtn button>i {
+    padding-bottom: 0.2rem;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.cardInfo .textInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.textInfo h1 {
+    font-family: reckless;
+    font-weight: 300;
+    font-size: 1.8rem;
+    padding: 0.7rem 0rem;
+}
+
+.textInfo span {
+    font-family: figtree;
+    font-size: 1rem;
+}
+
+.textInfo p {
+    width: 85%;
+    font-family: figtree;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.sec-2 .exploreBtn {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exploreBtn button {
+    padding: 1rem 3rem;
+    font-family: figtree;
+    background-color: #2b2755;
+    color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+main .sec-3 {
+    min-height: 100vh;
+    padding: 0rem 1rem;
+}
+
+.sec-3 .containerDiscover {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.containerDiscover .discover {
+    padding-top: 5rem;
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.discover .discoverBtn {
+    font-size: clamp(2.7rem, 5vw, 3.5rem);
+    font-family: midnight;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgb(32, 28, 26);
+    background-color: #f57e3b;
+    width: fit-content;
+    border: 1px solid black;
+    padding: 0rem 0.3rem;
+    border-radius: 0.5rem;
+    rotate: -3deg;
+}
+
+.discover h1 {
+    padding: 1rem 0rem 3rem 0rem;
+    font-family: reckless;
+    font-weight: 100;
+    font-size: clamp(2rem, 5vw, 3.7rem);
+}
+
+.discover .inputText {
+    width: 90%;
+    padding: 1rem 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.8rem;
+    text-align: center;
+    opacity: 0.5;
+    font-weight: 100;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.containerDiscover .exploreMore {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.exploreBtn,
+span {
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: figtree;
+}
+
+.exploreMoreBtn button {
+    width: fit-content;
+    margin: 0.3rem;
+    background-color: #dbeafe;
+    font-family: reckless;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    /* font-size: 2rem; */
+    font-size: clamp(1.8rem, 5vw, 1rem);
+    color: black;
+    border: 1px solid black;
+    border-radius: 0.7rem;
+    cursor: pointer;
+}
+
+.exploreMoreBtn button:active {
+    background-color: #c5dcfa;
+}
+
+main .sec-4 {
+    width: 100%;
+    min-height: 150vh;
+    background-image: url("https://www.twoleavestea.com/cdn/shop/files/adam-vradenburg-_gu7E90QChU-unsplash_1_1.webp?v=1771592855&width=2560");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.sec-4 .top {
+    padding-top: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.top button {
+    background-color: #a5c8fa;
+    font-family: midnight;
+    font-weight: 600;
+    font-size: clamp(2.3rem, 4vw, 3rem);
+    /* font-size: 2.2rem; */
+    letter-spacing: 2px;
+    padding: 0rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    rotate: -2deg;
+}
+
+.top h1 {
+    width: 90%;
+    font-size: clamp(5rem, 10vw, 11rem);
+    font-family: midnight;
+    font-weight: 500;
+    text-align: center;
+    line-height: 5rem;
+}
+
+.sec-4 .center {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center h3 {
+    width: 100%;
+    font-family: reckless;
+    font-size: clamp(2rem, 4vw, 3.7rem);
+    font-weight: 100;
+    text-align: center;
+}
+
+.sec-4 .bottomIcon {
+    width: 90%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomIcon .allIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allIcon .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.icon .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 70%;
+    cursor: pointer;
+}
+
+.icon p {
+    width: 100%;
+    padding-top: 0.5rem;
+    text-align: center;
+    font-family: robotoMono;
+    /* font-family: figtree; */
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.sec-4 .bottomBtn {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomBtn button {
+    width: 90%;
+    padding: 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+main .sec-5 {
+    min-height: 100vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: auto;
+    flex-shrink: 0;
+    gap: 2rem;
+}
+
+.sec-5 .topHeading button {
+    padding: 0rem 0.2rem;
+    background-color: #73bc25;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-family: midnight;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    rotate: -3deg;
+}
+
+.sec-5 .topHeading h2 {
+    width: 100%;
+    height: 10vh;
+    font-family: reckless;
+    font-size: clamp(2rem, 4vw, 3.7rem);
+    font-weight: 100;
+    padding: 1rem 0rem;
+}
+
+.sec-5 .cardContainer {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.cardContainer .card {
+    padding: 1rem;
+    width: 70%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.card1 {
+    background-color: #f2b08d;
+}
+
+.card1 .box {
+    background-color: #e66f49;
+}
+
+.card2 {
+    background-color: #addf7c;
+}
+
+.card2 .box {
+    background-color: #76bc3a;
+}
+
+.card3 {
+    background-color: #fdd36f;
+}
+
+.card3 .box {
+    background-color: #fcb62e;
+}
+
+.card4 {
+    background-color: #afe67d;
+}
+
+.card4 .box {
+    background-color: #8dc051;
+}
+
+.card5 {
+    background-color: #d8c2e0;
+}
+
+.card5 .box {
+    background-color: #c690d8;
+}
+
+.card .topText {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.topText h4 {
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.6rem);
+    font-weight: 100;
+    font-family: reckless;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+
+.topText span {
+    opacity: 0.6;
+    font-family: figtree;
+}
+
+.card .box {
+    width: 100%;
+    height: 25%;
+    padding: 0.2rem;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7rem;
+}
+
+.box .productImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box img {
+    width: 60px;
+    padding: 0.3rem;
+}
+
+.box .productDetail {
+    width: 90%;
+    height: 100%;
+    border-left: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.productDetail p {
+    width: 50%;
+    font-family: robotoMono;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: white;
+    font-size: clamp(0.5rem, 1vw, 0.8rem);
+    padding: 0.5rem;
+}
+
+.productDetail button {
+    padding: 1rem 1.2rem;
+    border-radius: 2.1rem;
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    opacity: 0.8;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+main .sec-6 {
+    width: 100%;
+    min-height: 200vh;
+}
+
+.sec-6 .topBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2857;
+}
+
+.sec-6 .banner-1 {
+    width: 100%;
+    min-height: 40vh;
+}
+
+.sec-6 .banner-1 img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.sec-6 .banner-2 {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding: 2rem 0rem;
+}
+
+.banner-2 h1 {
+    width: 90%;
+    font-size: clamp(3.2rem, 5vw, 5rem);
+    font-weight: 500;
+    font-family: reckless;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+
+.banner-2 p {
+    width: 90%;
+    color: white;
+    font-weight: 100;
+    font-size: 1.3rem;
+    font-family: figtree;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.banner-2 button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.sec-6 .banner-3 {
+    width: 100%;
+    min-height: 120vh;
+    padding: 2rem 0rem;
+    background-color: #9d6530;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.banner-3 .banner3Top {
+    width: 90%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.banner3Top span {
+    width: fit-content;
+    background-color: #fdcc9a;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-family: midnight;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    rotate: -3deg;
+}
+
+
+.banner3Top h1 {
+    color: white;
+    font-family: midnight;
+    font-weight: 500;
+    font-size: clamp(4rem, 5vw, 4.5rem);
+    line-height: 3.5rem;
+}
+
+.banner3Top p {
+    color: white;
+    font-family: figtree;
+    font-weight: 500;
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
+}
+
+.banner-3 .cardBox {
+    width: 90%;
+    min-height: 90vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: #fdcc9a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.cardBox .image {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+
+}
+
+.cardBox .image img {
+    display: initial;
+    position: absolute;
+    top: -20%;
+    transform: translateX(-25%);
+    width: 115%;
+    object-fit: contain;
+}
+
+.cardBox .image .fullScreen {
+    display: none;
+}
+
+.cardBox .textArea {
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.textArea span {
+    padding: 1rem;
+    width: fit-content;
+    padding: 0rem 0.2rem;
+    background-color: #eda05b;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-family: midnight;
+    font-weight: 600;
+    rotate: -3deg;
+}
+
+.textArea h1 {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: reckless;
+    text-align: center;
+}
+
+.textArea p {
+    width: 90%;
+    color: black;
+    font-weight: 100;
+    font-size: 1.1rem;
+    font-family: figtree;
+    text-align: center;
+    opacity: 0.8;
+    padding-bottom: 1rem;
+}
+
+.textArea button {
+    width: 60%;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+main .sec-7 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sec-7 .topSec {
+    width: 90%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.topSec .spnaBtn {
+    rotate: -3deg;
+}
+
+.topSec span {
+    padding: 1rem;
+    width: fit-content;
+    padding: 0rem 0.2rem;
+    background-color: #fcb62e;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-family: midnight;
+    font-weight: 600;
+}
+
+.topSec h1 {
+    width: 100%;
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    font-weight: 500;
+    font-family: reckless;
+    line-height: 2.3rem;
+}
+
+.sec-7 .journalContainer {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: auto;
+    padding-top: 2rem;
+}
+
+.journalContainer .cards {
+    margin-left: 1rem;
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
+
+.cards .cardTop {
+    width: 100%;
+    height: 80%;
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 1rem 1rem 0rem 0rem;
+    background-color: #2b2755;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cards button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: fit-content;
+    font-family: figtree;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    font-weight: 900;
+    padding: 0.2rem 0.4rem;
     font-size: 1.1rem;
 }
 
-
-
-@media (min-width:768px) {
-    
+.cards .image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all ease 0.3s;
 }
 
-@media (min-width:1024px) {
-
-    nav{
-   width: 100%;
- background-color: #FFFEFB;
- display: flex;
- align-items: center;
- justify-content: space-between;
- font-family: Reckless;
-  padding: 0.5rem 1rem;
-   font-size: 0.8rem;
-   position: sticky;
-
+.cards .image:hover {
+    scale: 1.2;
 }
-    nav .nav-part-1{
+
+.c1 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/enjoy_9b280eb3-acdd-47d2-ba91-0d2f259d3d66.svg?v=1774545568&width=750.0");
+    border-radius: 90%;
+}
+
+.c2 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/Two_Leaves_May_25_Shoot-36_16x9_6008ffcb-7380-43d9-b1f6-b1f542f934b0.jpg?v=1773683613&width=450.0%20360w,//www.twoleavestea.com/cdn/shop/articles/Two_Leaves_May_25_Shoot-36_16x9_6008ffcb-7380-43d9-b1f6-b1f542f934b0.jpg?v=1773683613&width=525.0%20420w,//www.twoleavestea.com/cdn/shop/articles/Two_Leaves_May_25_Shoot-36_16x9_6008ffcb-7380-43d9-b1f6-b1f542f934b0.jpg?v=1773683613&width=600.0%20480w,//www.twoleavestea.com/cdn/shop/articles/Two_Leaves_May_25_Shoot-36_16x9_6008ffcb-7380-43d9-b1f6-b1f542f934b0.jpg?v=1773683613&width=750.0%20600w,");
+}
+
+.c3 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/Two_Leaves_May_25_Shoot-24_SQ.jpg?v=1780326557&width=750.0");
+}
+
+.c4 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/chef_s_matcha_mix_9ae88222-5d88-415f-a90d-4cd0e47af7d8.svg?v=1775654273&width=750.0");
+}
+
+.c5 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/ceremonial-matcha-tea-organic_5cd06e48-0fae-43a5-aee4-7d523da377a7.svg?v=1780325404&width=750.0");
+}
+
+.c6 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/easy_to_prepare_cold_d444ce3d-bb29-4de5-83ae-4aef3582392b.svg?v=1775655934&width=750.0");
+}
+
+.c7 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/easy_to_prepare_cold_d2bb63c1-ef3c-4bd5-ac42-ecce65535274.svg?v=1775654474&width=750.0");
+}
+
+.c8 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/easy_to_prepare_cold_d2bb63c1-ef3c-4bd5-ac42-ecce65535274.svg?v=1775654474&width=750.0");
+}
+
+.c9 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/mountain-high-chai-naked-tea-pour_bc4facfe-d769-467b-9d98-1ca8bc3c10a5.svg?v=1775656147&width=750.0");
+}
+
+.c10 .image {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/articles/serving_powder_898afede-05d0-4bcf-bfa7-bfdb89c4c08d.svg?v=1773688431&width=750.0");
+}
+
+.cards .cardBottom {
+    width: 100%;
+    height: 20%;
+    border: 1px solid black;
+    border-radius: 0rem 0rem 1rem 1rem;
+    background-color: #c2dafd;
+}
+
+.cardBottom p {
+    padding: 1rem;
+    font-family: figtree;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.sec-7 .expoBtn {
+    width: 100%;
     display: flex;
-    gap: 1rem;
-    width: 30%;
-   
-   
-   
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0rem;
 }
-nav i{
+
+.expoBtn button {
+    width: 70%;
+    padding: 1rem;
+    border-radius: 2.5rem;
+    background-color: #2b2755;
+    color: white;
+    font-size: 1rem;
+    font-family: figtree;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.expoBtn button:hover {
+    background: transparent;
+    color: black;
+}
+
+main .sec-8 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ee6624;
+}
+
+.sec-8 .part1 .bgImage {
+    width: 100%;
+    min-height: 55vh;
+    background-image: url("https://www.twoleavestea.com/cdn/shop/files/1440.webp?v=1771593223&width=1125.0");
+    background-size: cover;
+    background-position: 90%;
+}
+
+.sec-8 .part2 {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.part2 h1 {
+    text-align: center;
+    color: white;
+    font-family: reckless;
+    font-weight: 100;
+    font-size: clamp(3rem, 5vw, 4rem);
+}
+
+.part2 .aboutBtn {
+    width: 80%;
+    text-align: center;
+}
+
+.aboutBtn button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px solid black;
+    background-color: white;
+    font-size: 1rem;
+    color: rgb(63, 63, 63);
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    background-color: #c2dafd;
+}
+
+
+footer .mediaSec {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+footer .email {
+    width: 100%;
+}
+
+.email input {
+    width: 90%;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+footer .socialMedia {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.socialMedia img {
+    width: 30px;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+footer .footBox {
+    width: 90%;
+    min-height: 50vh;
+    border-radius: 1rem;
+    border: 1px solid black;
+    background-color: #2a2857;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footBox .listText {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(98, 97, 97);
+}
+
+.listText h2 {
+    font-family: reckless;
+    font-size: 1.8rem;
+    font-weight: 100;
+    color: white;
+    cursor: pointer;
+}
+
+.listText i {
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    background-color: #c2dafd;
+    cursor: pointer;
+}
+
+
+
+footer .footer-container {
     display: none;
 }
 
-.nav-part-1 h3{
-  font-size: 1.5rem;
-font-weight: 300;
-}
-
-nav .nav-part-2{
-    width: 5%;
-
-    display: flex;
-    
-}
-.nav-part-3{
-    display: flex;
-    width: 40%;
-    gap: 1rem;
-    justify-content: end;
-    align-items: end;
- 
-}
-.nav-part-3 h3{
-font-weight: 300;
-display: block;
-font-size: 1.5rem;
-white-space: nowrap;
-}
-
-#section-1{
+footer .bottomImg {
     width: 100%;
-   text-align: start;
-   padding: 3rem 2rem;
-   background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2250.0);
-   background-size: cover;
+    min-height: 40vh;
+    background-image: url("https://www.twoleavestea.com/cdn/shop/files/footer-extended_1.png?v=1771834074");
+    background-size: cover;
+    background-position: center;
 }
 
-#section-1 h1{
-    width: 20%;
-}
-#section-1 p{
-    width: 20%;
+footer .logo {
+    /* width: 90%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#section-1 button{
-    width: fit-content;
-    padding: 1rem 4rem;
-    border-radius: 1.2rem,;
+.logo img {
+    width: 200px;
 }
+
+.copyright span {
+    color: gray;
+}
+
+@media (min-width: 768px) {
+    .sec-2 .container {
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+
+    .container .cardInfo {
+        width: 40%;
+        min-height: 10vh;
+    }
+
+    .cardInfo .card {
+        width: 90%;
+        min-height: 45vh;
+        gap: 1rem;
+    }
+
+    .sec-4 .top {
+        min-height: 100vh;
+        padding: 2rem;
+    }
+
+    .sec-4 .center {
+        min-height: 80vh;
+        width: 70%;
+        display: block;
+    }
+
+    .icon {
+        width: 20%;
+    }
+
+    .icon img {
+        width: 60%;
+    }
+
+    .bottomBtn button{
+        width: 30%;
+    }
+
+    .journalContainer {
+        min-height: 60vh;
+    }
+
+    .journalContainer .cards {
+        width: 35%;
+    }
+
+    .expoBtn button {
+        width: 35%;
+    }
+
+    .part2 .aboutBtn {
+        width: 50%;
+    }
+    .mediaSec .email {
+        width: 100%;
+    }
+}
+
+/*responsive here laptop*/
+@media (min-width: 1024px) {
+    nav {
+        padding: 0.5rem 1.2rem;
+    }
+
+    nav .left-icon i {
+        display: none;
+    }
+
+    .left-part a {
+        display: block;
+    }
+
+    .center-logo img {
+        width: 65%;
+    }
+
+    .right-part a {
+        display: block;
+    }
+
+    /*main */
+
+    .sec-1 {
+        margin-top: -100px;
+        padding-top: 100px;
+    }
+
+    main .sec-1 {
+        min-height: 80vh;
+        width: 100%;
+        background-image: url("https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2700.0");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .sec-1 .textContent {
+        min-height: 75vh;
+        width: 90%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 1rem;
+        text-align: left;
+        padding: 0rem 3rem;
+    }
+
+    .textContent h1 {
+        width: 28%;
+        font-size: clamp(4rem, 5vw, 5rem);
+    }
+
+    .textContent p {
+        width: 35%;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .textContent button {
+        width: fit-content;
+        padding: 0.8rem 2.8rem
+    }
+
+    .sec-2 {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sec-2 .text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sec-2 .text h1 {
+        width: 50%;
+    }
+
+    .sec-2 .text button {
+        rotate: -3deg;
+    }
+
+    .sec-2 .container {
+        padding: 0rem 2rem;
+        gap: 1rem;
+    }
+
+    .container .cardInfo {
+        width: 22%;
+        min-height: 10vh;
+    }
+
+    .cardInfo .card {
+        width: 90%;
+        min-height: 45vh;
+        gap: 1rem;
+    }
+
+    .cardInfo .card .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardInfo .card img {
+        width: 80%;
+    }
+
+    .sec-3 .containerDiscover {
+        padding-top: 2rem;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    .discover .inputText {
+        width: 30%;
+        padding: 1.2rem 5rem;
+    }
+
+    .containerDiscover .discover,
+    .containerDiscover .exploreMore {
+        width: 50%;
+    }
+
+    .exploreMoreBtn {
+        width: 100%;
+    }
+
+    .sec-4 .top {
+        min-height: 100vh;
+        padding: 2rem;
+    }
+
+    .top h1 {
+        line-height: 10rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .sec-4 .center {
+        min-height: 80vh;
+        width: 70%;
+        display: block;
+    }
+
+    .icon {
+        width: 20%;
+    }
+
+    .icon img {
+        width: 60%;
+    }
+
+    .icon p {
+        width: 100%;
+    }
+
+    .bottomBtn button {
+        width: fit-content;
+        padding: 1rem 3.7rem;
+        font-size: 1rem;
+        border-radius: 2rem;
+    }
+
+    .sec-5 .topHeading {
+        width: 70%;
+    }
+
+    .sec-5 .cardContainer {
+        width: 100%;
+    }
+
+    .cardContainer .card {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .sec-6 .topBanner {
+        flex-direction: row;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .sec-6 .banner-1 {
+        width: 100%;
+        height: 90vh;
+    }
+
+    .sec-6 .banner-1 img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+    }
+
+    .sec-6 .banner-2 {
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 1rem;
+        gap: 2rem;
+    }
+
+    .banner-2 h1 {
+        text-align: left;
+    }
+
+    .banner-2 p {
+        text-align: left;
+        width: 50%;
+    }
+
+    .banner-2 .banner2Btn {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
+    }
+
+    .banner-2 button {
+        width: 40%;
+        text-align: center;
+    }
+
+    .banner-3 .banner3Top {
+        justify-content: space-evenly;
+        gap: 0rem;
+    }
+
+    .banner-3 .cardBox {
+        width: 95vw;
+        height: 70vh;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardBox .image .mob {
+        display: none;
+    }
+
+    .cardBox .image {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .cardBox .image img {
+        display: initial;
+        position: absolute;
+        top: -10%;
+        transform: translateX(0%);
+        width: 0%;
+        object-fit: contain;
+    }
+
+    .cardBox .image .fullScreen {
+        display: block;
+        width: 100%;
+        height: 80%;
+    }
+
+    .cardBox .textArea {
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 3rem 2rem;
+    }
+
+    .textArea h1 {
+        text-align: left;
+    }
+
+    .textArea p {
+        width: 50%;
+        text-align: left;
+    }
+
+    .textArea button {
+        width: fit-content;
+    }
+
+    .sec-7 .topSec {
+        width: 100%;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .topSec h1 {
+        width: 100%;
+        text-align: center;
+        line-height: normal;
+    }
+
+    .journalContainer {
+        min-height: 60vh;
+    }
+
+    .journalContainer .cards {
+        width: 20%;
+    }
+
+    .expoBtn button {
+        width: 15%;
+    }
+
+    main .sec-8 {
+        min-height: 80vh;
+        position: relative;
+    }
+
+    .sec-8 .part1 .bgImage {
+        min-height: 80vh;
+    }
+
+    .sec-8 .part2 {
+        width: 25%;
+        min-height: 90%;
+        border: 1px solid black;
+        border-radius: 1.5rem;
+        position: absolute;
+        top: 5%;
+        left: 3%;
+        background-color: #ee6624;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .part2 h1 {
+        padding: 5rem 2rem;
+        text-align: left;
+    }
+
+    .part2 .aboutBtn {
+        padding: 5rem 2rem;
+        width: 40%;
+    }
+
+    footer {
+        padding-top: 7rem;
+    }
+
+    footer .footBox {
+        display: none;
+    }
+
+
+    footer .mediaSec {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 3rem 0rem;
+    }
+
+    .mediaSec .email {
+        width: 50%;
+    }
+
+    .mediaSec .socialMedia {
+        width: 40%;
+    }
+
+    .winFooter {
+        width: 95%;
+        min-height: 90vh;
+        border-radius: 1rem;
+        border: 1px solid black;
+        background-color: #2a2857;
+    }
+
+    .footer-container {
+        width: 80%;
+        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .footer-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+
+    .footer-column h3 {
+        width: 100%;
+        color: #fff;
+        font-family: reckless;
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding-bottom: 1.7rem;
+    }
+
+    .footer-column ul {
+        list-style: none;
+    }
+
+    .footer-column ul li {
+        padding-bottom: 0.5rem;
+    }
+
+    .footer-column ul li a {
+        color: #a9a9c3;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s;
+        font-family: figtree;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .footer-column ul li a:hover {
+        color: #ffffff;
+    }
+
+
 }
